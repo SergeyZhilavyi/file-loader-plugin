@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Qahiri&family=Roboto:wght@300&display=swap');
+
+body {
+    background: #F0FFFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    padding-top: 5rem;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 16px;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, .2); 
+}
+
+.btn {
+    color: #4682B4;
+    position: relative;
+    border-radius: 99px;
+    border: 1px solid #4682B4;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    outline: none;
+    background: #fff;
+    transition: all 0.22s;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.btn.primary {
+    background: #4682B4;
+    color: #fff;
+}
+
+.btn:active {
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+
+input[type="file"] {
+    display: none;
+}
+
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
+
+
+.preview-image {
+    position: relative;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+    overflow: hidden;
+}
+
+.preview-image.removing {
+    transform: scale(0);
+    transition: transform .3s;
+}
+
+.preview-image img {
+    width: 180px;
+    height: auto;
+}
+
+.preview-image:hover .preview-remove {
+    opacity: 1;
+}
+
+.preview-image:hover .preview-info {
+    bottom: 4px;
+}
+
+.preview-remove {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity .22s; 
+}
+
+.preview-info {
+    height: 24px;
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    left: 0;
+    font-size: .8rem; 
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px; 
+    transition: bottom .22s; 
+}
+
+.preview-info-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #4682B4;
+    text-align: center;
+    transition: width .22s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
